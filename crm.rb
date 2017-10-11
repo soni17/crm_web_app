@@ -18,3 +18,5 @@ end
 after do
   ActiveRecord::Base.connection.close
 end
+
+#completed part 1
