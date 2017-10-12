@@ -1,4 +1,14 @@
-<h1>Welcome to CRM Application</h1>
-</br>
-</br>
-<a href="/contacts">View all contacts</a>
+<div>
+
+<div class="contactBox allContacts">There are <span class="tc"><%= @allContacts.length %></span> contacts</div>
+
+  <% @allContacts.each do |contact| %>
+    <div class="contactBox contact">
+      <p> <%= contact.full_name %> (<%= contact.email %>)</p>
+      <div class="edit-delete">
+        <a href="/edit">Edit</a> | <a href="/delete">Delete</a>
+      </div>
+    </div>
+  <% end %>
+
+</div>
