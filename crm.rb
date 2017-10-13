@@ -15,7 +15,7 @@ get '/contacts' do
 end
 
 get '/contacts/new' do
-  erb :new
+  erb :new_contact
 end
 
 post '/contacts' do
@@ -40,7 +40,16 @@ get '/contacts/:id' do
 
 end
 
+get '/contacts/:id/edit' do
+  id = params[:id].to_i
+  @contact = Contact.find_by(id: id)
 
+  if @contact
+    erb :edit_contact
+  else
+    erb :not_found
+  end
+end
 
 
 after do
