@@ -6,7 +6,7 @@
     <div class="contactBox contact">
       <p> <a id="contactLink" href="/contacts/<%= contact.id %>" ><%= contact.full_name %> (<%= contact.email %>)</p></a>
       <div class="edit-delete">
-        <a href="/contacts/<%= contact.id%>/edit">Edit</a> | <a href="/delete">Delete</a>
+        <a href="/contacts/<%= contact.id%>/edit">Edit</a> | <a href="/contacts/<%= contact.id %>">Delete</a>
       </div>
     </div>
   <% end %>
