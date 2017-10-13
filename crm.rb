@@ -5,17 +5,17 @@ get '/' do
   redirect to('/contacts')
 end
 
+get '/about' do
+  erb :about
+end
+
 get '/contacts' do
     @allContacts = Contact.all()
   erb :contacts
 end
 
-get '/add-contact' do
-  erb :addContact
-end
-
-get '/about' do
-  erb :about
+get '/contacts/new' do
+  erb :new
 end
 
 get '/contacts/:id' do
@@ -34,5 +34,3 @@ end
 after do
   ActiveRecord::Base.connection.close
 end
-
-#completed part 3
