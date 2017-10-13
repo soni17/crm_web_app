@@ -21,7 +21,13 @@ end
 get '/contacts/:id' do
   id = params[:id].to_i
   @contact = Contact.find_by(id: id)
-  erb :show_contact
+
+  if @contact
+    erb :show_contact
+  else
+    erb :not_found
+  end
+
 end
 
 
