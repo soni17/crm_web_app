@@ -66,6 +66,11 @@ footer p{
   padding-left:25px;
 }
 
+#contactLink{
+  text-decoration: none !important;
+  color:black !important;
+}
+
 .edit-delete{
   font-weight:normal;
   font-size:12px;
